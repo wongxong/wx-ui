@@ -8,7 +8,7 @@ module.exports = {
     ['wx-ui-' + VERSION]: './src/output.js',
   },
   output: {
-    filename: 'js/[name].min.js',
+    filename: '[name].min.js',
     library: 'wx',
     libraryTarget: 'umd'
   },
