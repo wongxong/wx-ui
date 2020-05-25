@@ -1,0 +1,142 @@
+
+
+.wx-suggest {
+  position: relative;
+  display: inline-block;
+  width: 300px;
+}
+
+.wx-suggest__reference {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0 30px 0 6px;
+  font-size: 14px;
+  border: 1px solid #dcdee2;
+  cursor: pointer;
+  transition: .2s;
+
+  &:hover,
+  &.is-visible,
+  &.is-focus {
+    border-color: #57a3f3;
+  }
+
+  &.is-visible {
+    .wx-suggest__arrow {
+      transform: translateY(-50%) rotate(90deg);
+    }
+  }
+}
+
+.wx-suggest__input {
+  display: inline-block;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 4px;
+  background-image: none;
+  background-color: transparent;
+  border: none;
+  -webkit-appearance: none;
+  color: #606266;
+  outline: none;
+  cursor: pointer;
+}
+
+.wx-suggest__suffix {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30px;
+  height: 100%;
+  text-align: center;
+}
+
+.wx-suggest__clear {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  font: 16px/14px Tahoma,Verdana,sans-serif;
+  font-style: normal;
+}
+
+.wx-suggest__dropdown {
+  overflow: auto;
+  max-height: 360px;
+  position: absolute;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+  border: 1px solid #e4e7ed;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.wx-suggest__list {
+  list-style: none;
+  padding: 5px 0;
+}
+
+.wx-suggest__list-item {
+  position: relative;
+  height: 34px;
+  line-height: 34px;
+  padding: 0 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: background-color .2s;
+  cursor: pointer;
+
+  &:hover,
+  &.hover {
+    background-color: #f5f7fa;
+  }
+
+  &.active {
+    color: #409eff;
+  }
+}
+
+.hidden {
+  display: none!important;
+}
+
+.wx-suggest__tag {
+  display: inline-block;
+  height: 24px;
+  line-height: 22px;
+  margin: 4px 6px 0 0;
+  padding: 0 8px;
+  background-color: #f4f4f5;
+  border: 1px solid #e9e9eb;
+  color: #909399;
+  font-size: 12px;
+}
+
+.wx-suggest__empty-data,
+.wx-suggest__loading {
+  padding: 10px 0;
+  margin: 0;
+  text-align: center;
+  color: #ccc;
+  font-size: 12px;
+}
+
+.ANI_fade_in {
+  animation-name: fadeIn;
+}
+
+.ANI_200 {
+  animation-duration: 300ms;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

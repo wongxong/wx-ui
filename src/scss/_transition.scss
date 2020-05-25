@@ -1,0 +1,52 @@
+
+
+.wx-fade-zoom-enter,
+.wx-fade-zoom-leave-to {
+  opacity: 0;
+  transform: scaleY(.8);
+}
+
+.wx-fade-zoom-enter-active,
+.wx-fade-zoom-leave-active,
+.wx-fade-drop-enter-active,
+.wx-fade-drop-leave-active {
+  transition: opacity .3s, transform .3s;
+}
+
+.wx-fade-zoom-enter-to,
+.wx-fade-zoom-leave {
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+.wx-fade-drop-enter,
+.wx-fade-drop-leave-to {
+  opacity: 0;
+  transform: translateY(-30px);
+}
+
+.wx-fade-drop-enter-to,
+.wx-fade-drop-leave {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.wx-backdrop-fade-enter {
+  animation: backdropFadeIn .25s ease;
+}
+
+.wx-backdrop-fade-leave {
+  animation: backdropFadeOut .25s ease forwards;
+}
+
+@keyframes backdropFadeIn {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes backdropFadeOut {
+  to {
+    opacity: 0;
+  }
+}

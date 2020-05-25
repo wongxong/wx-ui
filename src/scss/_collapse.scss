@@ -1,0 +1,31 @@
+
+.wx-collapse {
+  // border-top: 1px solid $border-color-default;
+  border-bottom: 1px solid $border-color-default;
+}
+
+.wx-collapse-item {
+  border-top: 1px solid $border-color-default;
+}
+
+.wx-collapse-item__header {
+  height: 40px;
+  line-height: 40px;
+  // border-bottom: 1px solid $border-color-default;
+}
+
+.wx-collapse-item__body {
+  display: none;
+
+  p {
+    line-height: 1.8;
+    
+    &:last-child {
+      padding-bottom: 30px;
+    }
+  }
+}
+
+.wx-collapse-transition {
+  transition: all .3s;
+}

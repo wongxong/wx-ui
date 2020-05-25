@@ -1,0 +1,97 @@
+.wx-loading-parent--hidden {
+  overflow: hidden!important;
+}
+
+.wx-loading-parent--relative {
+  position: relative!important;
+}
+
+.wx-loading-mask {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 99999999;
+  margin: 0;
+  background-color: rgba(0, 0, 0, .3);
+
+  &.is-fullscreen {
+    position: fixed;
+  }
+}
+
+.wx-loading-spinner {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.wx-loading-icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+
+  .circular {
+    display: block;
+    height: 100%;
+    width: 100%;
+    animation: loading-roate 2s infinite;
+  }
+
+  .path {
+    animation: loading-dash 1.5s ease-in-out infinite;
+    stroke-dasharray: 90,150;
+    stroke-dashoffset: 0;
+    stroke-width: 2;
+    stroke: $color-primary;
+    stroke-linecap: round;
+  }
+}
+
+.wx-loading-text {
+  color: $color-primary;
+  margin: 3px 0;
+  font-size: 14px;
+}
+
+.wx-loading-fade-enter,
+.wx-loading-fade-leave-to {
+  opacity: 0;
+}
+
+.wx-loading-fade-enter-active,
+.wx-loading-fade-leave-active {
+  transition: opacity .2s;
+}
+
+.wx-loading-fade-enter-to,
+.wx-loading-fade-leave {
+  opacity: 1;
+}
+
+@keyframes loading-rotate {
+  to {
+      transform: rotate(1turn)
+  }
+}
+
+@keyframes loading-dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0
+  }
+
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -40px
+  }
+
+  to {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -120px
+  }
+}

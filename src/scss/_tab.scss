@@ -1,0 +1,100 @@
+
+
+.wx-tabs {
+  &:not(.is-vertical) {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid $border-color-default;
+
+    .wx-tab-item {
+      margin-right: 20px;
+    }
+
+    .wx-tab-link {
+      padding: 9px 5px;
+
+      &::after {
+        right: 0;
+        left: 0;
+        width: 0;
+        border-bottom: 2px solid $color-primary;
+        transition: width .2s;
+      }
+    
+      &.active {
+        &::after {
+          width: 100%;
+        }
+      }
+    
+      &:not(.active):hover {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &.is-vertical {
+    .wx-tab-item {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .wx-tab-link {
+      padding: 9px 15px;
+
+      &::after {
+        right: -1px;
+        top: 0;
+        height: 0;
+        border-right: 2px solid $color-primary;
+        transition: height .2s;
+      }
+    
+      &.active {
+        &::after {
+          height: 100%;
+        }
+      }
+    
+      &:not(.active):hover {
+        &::after {
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+.wx-tab-link {
+  position: relative;
+  display: block;
+  white-space: nowrap;
+  transition: color .2s;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    margin: auto;
+  }
+
+  &.active {
+    color: $color-primary;
+  }
+
+  &:not(.active):hover {
+    color: unset;
+  }
+}
+
+.wx-tab-content {
+  > .wx-tab-card {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}

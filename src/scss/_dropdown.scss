@@ -1,0 +1,36 @@
+.wx-dropdown__reference {
+  cursor: pointer;
+}
+
+.wx-dropdown__popper {
+  min-width: 160px;
+}
+
+.wx-dropdown__list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.wx-dropdown__list-item {
+  padding: 6px 20px;
+  line-height: 24px;
+  color: #606266;
+  font-size: 14px;
+  cursor: pointer;
+  transition: .2s;
+
+  &.active {
+    color: $color-primary;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &:hover {
+    background-color: #ecf5ff;
+    color: $color-primary;
+  }
+}

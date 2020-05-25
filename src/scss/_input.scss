@@ -1,0 +1,74 @@
+
+.wx-input,
+.wx-textarea {
+  position: relative;
+  font-size: 14px;
+}
+
+.wx-input__prefix,
+.wx-input__suffix {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  pointer-events: none;
+}
+
+.wx-input__prefix {
+  left: 5px;
+}
+
+.wx-input__suffix {
+  right: 5px;
+}
+
+
+.wx-input--prefix {
+  .wx-input__inner {
+    padding-left: 30px;
+  }
+}
+
+.wx-input--suffix {
+  .wx-input__inner {
+    padding-right: 30px;
+  }
+}
+
+.wx-input__inner,
+.wx-textarea__inner {
+  display: block;
+  width: 100%;
+  background-color: #fff;
+  background-image: none;
+  border-radius: 2px;
+  border: 1px solid $border-color-default;
+  font-size: inherit;
+  color: $text-color-default;
+  transition: border-color .2s;
+
+  &:hover {
+    border-color: $border-color-hover;
+  }
+
+  &:focus {
+    border-color: $border-color-focus;
+  }
+}
+
+.wx-input__inner {
+  height: 40px;
+  line-height: 40px;
+  padding: 0 15px;
+  -webkit-appearance: none;
+}
+
+.wx-textarea__inner {
+  resize: vertical;
+  padding: 5px 15px;
+  line-height: 1.5;
+}
+
+.wx-input-small .wx-input__inner {
+  height: 30px;
+  line-height: 30px;
+}

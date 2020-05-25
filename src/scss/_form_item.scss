@@ -1,0 +1,56 @@
+
+.wx-form-item {
+  margin-bottom: 15px;
+
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  @each $val in (80, 100, 120, 140, 160) {
+    &.label-width-#{$val} {
+      > .wx-form-item__label {
+        width: #{$val}px;
+      }
+  
+      > .wx-form-item__content {
+        margin-left: #{$val}px;
+      }
+    }
+  }
+
+  &.is-suffix {
+    > .wx-form-item__suffix {
+      display: block;
+      float: right;
+      width: 100px;
+      line-height: 32px;
+    }
+
+    > .wx-form-item__content {
+      margin-right: 100px;
+    }
+  }
+}
+
+.wx-form-item__label {
+  float: left;
+  line-height: 32px;
+  font-size: inherit;
+  color: inherit;
+  padding-right: 10px;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.wx-form-item__suffix {
+  display: none;
+}
+
+.wx-form-item__content {
+  position: relative;
+  line-height: 32px;
+  font-size: inherit;
+  color: inherit;
+}

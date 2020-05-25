@@ -1,0 +1,52 @@
+.wx-modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.wx-modal-dialog {
+  position: relative;
+  width: 50%;
+  margin: 15vh auto 50px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .3)
+}
+
+.wx-modal__header {
+  padding: 20px 20px 10px;
+}
+
+.wx-modal__title {
+  margin-bottom: 0;
+  line-height: 24px;
+  font-size: 18px;
+  color: #303133;
+  font-weight: 400;
+}
+
+.wx-modal__headerBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.wx-modal__body {
+  padding: 30px 20px;
+  color: #606266;
+  font-size: 14px;
+}
+
+.wx-modal__footer {
+  padding: 10px 20px 20px;
+}
+

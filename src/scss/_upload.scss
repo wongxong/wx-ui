@@ -1,0 +1,134 @@
+
+.wx-upload {
+  [type="file"] {
+    display: none;
+  }
+}
+
+.wx-upload__control {
+  
+}
+
+.wx-upload__list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.wx-upload__list-item {
+  position: relative;
+  overflow: hidden;
+  font-size: 14px;
+  color: $text-color-default;
+
+  & + .wx-upload__list-item {
+    margin-top: 15px;
+  }
+}
+
+.wx-upload__list-item-thumbnail {
+  overflow: hidden;
+  position: relative;
+  width: $upload-picture-width;
+  height: $upload-picture-height;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  img {
+    opacity: 0;
+  }
+}
+
+.wx-upload__list-item-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: $text-color-default;
+}
+
+.wx-upload__list-item-status {
+  display: none;
+  position: absolute;
+  right: -17px;
+  top: -7px;
+  width: 46px;
+  height: 26px;
+  background-color: #13ce66;
+  text-align: center;
+  transform: rotate(45deg);
+}
+
+.wx-upload__list-item-success {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  left: 20px;
+  top: 10px;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: -25px;
+    width: 5px;
+    height: 10px;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+  }
+}
+
+.wx-upload__list-item-remove {
+  display: none;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  opacity: .75;
+  color: $text-color-default;
+}
+
+.wx-upload__list--text {
+
+}
+
+.wx-upload__list--picture {
+  .wx-upload__list-item {
+    padding: 10px 10px 10px $upload-picture-width + 20px;
+    border: 1px solid $border-color-default;
+    background-color: #fff;
+    border-radius: 6px;
+
+    &.is-success {
+      .wx-upload__list-item-status {
+        display: block;
+      }
+    }
+
+    &:hover {
+      .wx-upload__list-item-status {
+        display: none!important;
+      }
+
+      .wx-upload__list-item-remove {
+        display: block;
+      }
+    }
+  }
+
+  .wx-upload__list-item-thumbnail {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    margin-left: - ( $upload-picture-width + 10px );
+  }
+
+  .wx-upload__list-item-content {
+    display: inline-block;
+    max-width: 100%;
+    vertical-align: middle;
+    padding: 5px 10px;
+  }
+}
+
+.wx-upload__list--picture-card {
+
+}

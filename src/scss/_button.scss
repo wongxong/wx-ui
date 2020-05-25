@@ -1,0 +1,30 @@
+.wx-button {
+  display: inline-block;
+  line-height: 20px;
+  white-space: nowrap;
+  cursor: pointer;
+  background-color: #fff;
+  color: #606266;
+  border: 1px solid #dcdfe6;
+  -webkit-appearance: none;
+  text-align: center;
+  outline: 0;
+  margin: 0;
+  font-weight: 500;
+  transition: .2s;
+  font-size: 14px;
+  padding: 9px 20px;
+  border-radius: 4px;
+}
+
+.wx-button-small {
+  font-size: 12px;
+  padding: 4px 15px;
+  border-radius: 2px;
+}
+
+.wx-button-primary {
+  background-color: $color-primary;
+  color: #fff;
+  border-color: $color-primary;
+}

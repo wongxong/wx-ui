@@ -1,0 +1,49 @@
+
+
+.wx-progress {
+  position: relative;
+  line-height: 1;
+}
+
+.wx-progress-bar {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  padding-right: 75px;
+  margin-right: -70px;
+}
+
+.wx-progress-bar__outer {
+  position: relative;
+  overflow: hidden;
+  height: 6px;
+  border-radius: 100px;
+  background-color: #ebeef5;
+  vertical-align: middle;
+}
+
+.wx-progress-bar__inner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: #409eff;
+  text-align: right;
+  border-radius: 100px;
+  line-height: 1;
+  white-space: nowrap;
+  transition: width .6s ease;
+}
+
+.wx-progress-text {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  color: $text-color-default;
+}
+
+.wx-progress--inline {
+  .wx-progress-text {
+    
+  }
+}
